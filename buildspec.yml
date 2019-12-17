@@ -19,10 +19,10 @@ phases:
     commands:
       - rm calculate_func.js.j2
 
-  artifacts:
-    files:
-      - ./calculate_func.js
-      - ./index.html
-      - ./stylesheet.css
-    name: frontend-artifact
+artifacts:
+  files:
+    - ./calculate_func.js
+    - ./index.html
+    - ./stylesheet.css
+  name: frontend-artifact
 
