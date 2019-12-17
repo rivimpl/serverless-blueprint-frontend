@@ -1,0 +1,28 @@
+version: 0.2
+
+env:
+  parameter-store:
+    API_INVOKE_URL: /terraform/blueprints/serverless/api-invoke-url
+
+phases:
+  install:
+    commands:
+      - apt install python3
+      - apt install python3-pip
+      - pip3 install jinja2-cli
+
+  build:
+    commands:
+      - jinja2 calculate_func.js.j2 -D api_endpoint=$API_INVOKE_URL > calculate_func.js
+
+  post_build:
+    commands:
+      - rm calculate_func.js.j2
+
+  artifacts:
+    files:
+      - ./calculate_func.js
+      - ./index.html
+      - ./stylesheet.css
+    name: frontend-artifact
+

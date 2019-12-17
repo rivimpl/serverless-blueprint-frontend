@@ -1,0 +1,13 @@
+$(function(){
+  $('#calculate').click(function(){
+    var expression = btoa($('#display').val().toString());
+    $.post(
+      "{{ api_endpoint }}",
+      {
+        expression: expression
+      },
+      function(data){
+        document.getElementById("display").value = data['result']
+      }, "json");
+  });
+});
