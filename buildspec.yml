@@ -6,6 +6,8 @@ env:
 
 phases:
   install:
+    runtime-versions:
+      docker: 18
     commands:
       - apt install python3
       - apt install python3-pip
