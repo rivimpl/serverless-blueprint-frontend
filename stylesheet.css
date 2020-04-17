@@ -1,4 +1,4 @@
-body {
+  body {
 	background-color: #424242;
 	font-family: Tahoma;
 }
@@ -84,9 +84,9 @@ body {
 
 #clearButton {
 	color: #FFF;
-	background-color: #D20000;
-	border-top: 2px solid #FF8484;
-	border-right: 2px solid #FF8484;
-	border-bottom: 2px solid #800000;
-	border-left: 2px solid #800000;
+	background-color: #FFF;
+	border-top: 2px solid #FFF;
+	border-right: 2px solid #FFF;
+	border-bottom: 2px solid #FFF;
+	border-left: 2px solid #FFF;
 }
