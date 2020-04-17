@@ -9,8 +9,9 @@ phases:
     runtime-versions:
       docker: 18
     commands:
-      - apt install python3
-      - apt install python3-pip
+      - apt update
+      - apt install python3 -y
+      - apt install python3-pip -y
       - pip3 install jinja2-cli
 
   build:
